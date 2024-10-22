@@ -7,7 +7,7 @@
       <input v-model="textColor" type="text" />
       <div class="checkbox">
         <label>Mostrar texto</label>
-        <input  type="checkBox" v-model="showText" />
+        <input type="checkbox" v-model="showText" />
       </div>
       <label>Borde</label>
       <input v-model="border" type="range" min="0" max="120" />
@@ -16,17 +16,23 @@
       <label>Tipografía</label>
       <select v-model="fontSelected">
         <option disabled value="">Seleciona una fuente</option>
-        <option v-for="typography in font" :value="typography" :key="typography">{{typography}}</option>
+        <option
+          v-for="typography in font"
+          :value="typography"
+          :key="typography"
+        >
+          {{ typography }}
+        </option>
       </select>
       <div class="checkbox">
         <label>Opacidad</label>
-        <input v-model="opacity" type="checkBox" />
+        <input v-model="opacity" type="checkbox" />
       </div>
       <label>Tamaño de letra</label>
       <div class="inputRadio">
-        <input v-model="fontSize" type="radio" value="pequeño"/>Pequeño
-        <input v-model="fontSize" type="radio" value="mediano"/>Mediano
-        <input v-model="fontSize" type="radio" value="grande"/>Grande
+        <input v-model="fontSize" type="radio" value="pequeño" />Pequeño
+        <input v-model="fontSize" type="radio" value="mediano" />Mediano
+        <input v-model="fontSize" type="radio" value="grande" />Grande
       </div>
     </div>
     <div
@@ -39,11 +45,10 @@
         opacity: opacity ? 0.5 : 1,
         fontSize,
         fontFamily: fontSelected,
-
       }"
     >
       <p v-show="showText">
-        {{ text }}
+        {{text}}
       </p>
     </div>
   </section>
@@ -56,20 +61,19 @@ export default {
     return {
       bgColor: "",
       textColor: "",
-      showText: false,
+      showText: true,
       border: 0,
       text: "",
       font: ["cursive", "sans-serif", "serif", "monospace"],
       fontSelected: "",
-      opacity: false,
+      opacity: true,
       fontSize: "mediano",
-
     };
   },
 };
 </script>
 
-<style scoped>
+<style>
 .box-main {
   display: flex;
   justify-content: center;
@@ -97,7 +101,6 @@ export default {
   align-items: center;
   gap: 10px;
   padding: 20px;
-  
 }
 .pequeño {
   font-size: 15px;
@@ -106,6 +109,6 @@ export default {
   font-size: 25px;
 }
 .grande {
-  font-size:35px;
+  font-size: 35px;
 }
 </style>

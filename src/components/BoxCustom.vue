@@ -39,16 +39,16 @@
       id="box-rendering"
       :class="fontSize"
       :style="{
-        backgroundColor: bgColor,
-        color: textColor,
-        borderRadius: `${border}px`,
-        opacity: opacity ? 0.5 : 1,
+        backgroundColor   : bgColor,
+        color             : textColor,
+        borderRadius      : `${border}px`,
+        opacity           : opacity ? 0.5 : 1,
         fontSize,
-        fontFamily: fontSelected,
+        fontFamily        : fontSelected,
       }"
     >
       <p v-show="showText">
-        {{text}}
+        {{ text }}
       </p>
     </div>
   </section>
@@ -59,15 +59,15 @@ export default {
   name: "BoxCustom",
   data() {
     return {
-      bgColor: "",
-      textColor: "",
-      showText: true,
-      border: 0,
-      text: "",
-      font: ["cursive", "sans-serif", "serif", "monospace"],
-      fontSelected: "",
-      opacity: true,
-      fontSize: "mediano",
+      bgColor             : "",
+      textColor           : "",
+      showText            : true,
+      border              : 0,
+      text                : "",
+      font                : ["cursive", "sans-serif", "serif", "monospace"],
+      fontSelected        : "",
+      opacity             : true,
+      fontSize            : "mediano",
     };
   },
 };
@@ -75,40 +75,40 @@ export default {
 
 <style>
 .box-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 20px;
+  display                 : flex;
+  justify-content         : center;
+  align-items             : center;
+  height                  : 100vh;
+  gap                     : 20px;
 }
 .box-custom {
-  display: flex;
-  flex-direction: column;
+  display                 : flex;
+  flex-direction          : column;
   gap: 10px;
-  background-color: cadetblue;
-  padding: 20px;
+  background-color        : cadetblue;
+  padding                 : 20px;
 }
 .checkbox {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  display                 : flex;
+  gap                     : 10px;
+  align-items             : center;
 }
 #box-rendering {
-  height: 200px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
+  height                  : 200px;
+  width                   : 200px;
+  display                 : flex;
+  justify-content         : center;
+  align-items             : center;
+  gap                     : 10px;
+  padding                 : 20px;
 }
 .pequeño {
-  font-size: 15px;
+  font-size               : 15px;
 }
 .mediano {
-  font-size: 25px;
+  font-size               : 25px;
 }
 .grande {
-  font-size: 35px;
+  font-size               : 35px;
 }
 </style>
